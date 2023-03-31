@@ -36,7 +36,7 @@ alias router='netstat -nr|grep default'
 
 # history
 alias gh='history|grep'
-
+alias chist='/usr/bin/open -a "/Applications/Google Chrome.app" "chrome://history/"'
 
 # apt
 alias sapu='sudo apt-get update'
