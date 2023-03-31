@@ -138,6 +138,7 @@ eval "$(direnv hook zsh)"
 
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/gitlab
+ssh-add ~/.ssh/github
 
 
 # +---------+
