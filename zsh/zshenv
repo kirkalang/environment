@@ -1,0 +1,47 @@
+##
+## Make any necessary changes to this file and copy to $HOME directory
+##
+
+# +--------------+
+# | HOME DIRS    |
+# +--------------+
+
+CONFIG_HOME=$HOME/.config
+export DOTFILES="$CONFIG_HOME"
+export ZDOTDIR="$CONFIG_HOME/zsh"
+
+export WORKSPACE="$HOME/developer"
+
+# +------------+
+# | HISTORY    |
+# +------------+
+
+export HISTFILE="$ZDOTDIR/.zhistory"    # History filepath
+export HISTSIZE=10000                   # Maximum events for internal history
+export SAVEHIST=10000                   # Maximum events in history file
+
+
+# +---------+
+# |  VIM    |
+# +---------+
+
+export ZVIMRCDIR="$HOME/.vim"
+
+# +---------+
+# | TERM    |
+# +---------+
+
+export TERM='rxvt-256color'
+
+# +---------+
+# | PYENV   |
+# +---------+
+
+export PYENV_ROOT="$HOME/.pyenv"
+
+
+# +---------+
+# | SCRIPTS |
+# +---------+
+
+path+=('/Users/kirklang/developer/bin')
