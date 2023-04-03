@@ -33,6 +33,13 @@ alias tcn='mv --force -t ~/.local/share/Trash'
 alias myip='curl http://ipecho.net/plain; echo'
 alias router='netstat -nr|grep default'
 
+# chrome
+alias async='chrome "https://async.zapier.com/"'
+alias codepen='chrome "https://codepen.io/pen/"'
+alias gitlab='chrome "https://gitlab.com/zapier/"'
+
+## coda pages
+alias collab='chrome "https://coda.io/d/Zap-Editor-Collaboration_dowJu7x9-hx/Test-Plan-Templates_sul7S"'
 
 # history
 alias gh='history|grep'
