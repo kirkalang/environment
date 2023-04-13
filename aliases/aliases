@@ -1,3 +1,9 @@
+# configuration
+alias realias='source $DOTFILES/aliases/aliases'
+alias edalias='vi ~/.config/aliases/aliases'
+alias grepalias='alias | grep '
+alias rescript='source $ZDOTDIR/scripts.zsh'
+
 # system
 alias bigf= 'find / -xdev -type f -size +500M'  # display "big" files > 500M
 alias lt='du -sh * | sort -h'
@@ -33,17 +39,28 @@ alias tcn='mv --force -t ~/.local/share/Trash'
 alias myip='curl http://ipecho.net/plain; echo'
 alias router='netstat -nr|grep default'
 
+
 # chrome
 alias async='chrome "https://async.zapier.com/"'
 alias codepen='chrome "https://codepen.io/pen/"'
 alias gitlab='chrome "https://gitlab.com/zapier/"'
+alias gleditor='chrome https://gitlab.com/zapier/team-zap-creation-infinity/editor'
+alias gltodo='chrome https://gitlab.com/dashboard/todos'
+alias gcal='chrome https://calendar.google.com/calendar/u/0/r'
+
 
 ## coda pages
 alias collab='chrome "https://coda.io/d/Zap-Editor-Collaboration_dowJu7x9-hx/Test-Plan-Templates_sul7S"'
 
+
 # history
 alias gh='history|grep'
 alias chist='/usr/bin/open -a "/Applications/Google Chrome.app" "chrome://history/"'
+
+
+# activity monitor
+alias monitor='open /System/Applications/Utilities/Activity\ Monitor.app'
+
 
 # apt
 alias sapu='sudo apt-get update'
@@ -70,8 +87,11 @@ alias grb='git branch -r'                                                       
 alias gplo='git pull origin'
 alias gb='git branch '
 alias gc='git commit'
+alias gca='git commit --amend'
+alias gcm='git commit -m '
 alias gd='git diff'
 alias gco='git checkout '
+alias gcob='git checkout -b '
 alias gl='git log --pretty=oneline'
 alias gr='git remote'
 alias grs='git remote show'

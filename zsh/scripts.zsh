@@ -1,5 +1,11 @@
 #!/usr/bin/env zsh
 
+# open chrome with specified url
+function chrome() {
+  /usr/bin/open -a "/Applications/Google Chrome.app" "$1"
+}
+
+
 # zapier
 
 ## jira
@@ -56,3 +62,4 @@ function gpt() {
     "https://api.openai.com/v1/chat/completions" \
     | jq -r '.choices[0].message.content'
 }
+

@@ -158,3 +158,10 @@ export JIRA_ZAPIERACCOUNT_TOKEN=joBNc7IJlavnixJms2IC87D2
 # +---------+
 
 export NEXT_PUBLIC_SPLITIO_DISABLE_DEBUG=true
+
+
+# +---------+
+# | OpenAI  |
+# +---------+
+
+export OPENAI_API_KEY=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
