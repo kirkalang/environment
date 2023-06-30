@@ -4,3 +4,6 @@ jgit/
 yarn/
 zsh/.zcompdump
 zsh/.zsh_history
+zsh/.zsh_sessions/
+.vim/
+*.swp

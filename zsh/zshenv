@@ -6,7 +6,7 @@
 # | HOME DIRS    |
 # +--------------+
 
-CONFIG_HOME=$HOME/.config
+CONFIG_HOME=$HOME/.config/environment
 export DOTFILES="$CONFIG_HOME"
 export ZDOTDIR="$CONFIG_HOME/zsh"
 
@@ -20,12 +20,16 @@ export HISTFILE="$ZDOTDIR/.zhistory"    # History filepath
 export HISTSIZE=10000                   # Maximum events for internal history
 export SAVEHIST=10000                   # Maximum events in history file
 
+# +-----+
+# | GIT |
+# +-----+
+export GITENVCONFIG="$CONFIG_HOME/git/gitenv.sh"
 
 # +---------+
 # |  VIM    |
 # +---------+
 
-export ZVIMRCDIR="$HOME/.vim"
+export ZVIMRCDIR="$CONFIG_HOME/.vim"
 
 # +---------+
 # | TERM    |
@@ -37,8 +41,12 @@ export TERM='rxvt-256color'
 # | PYENV   |
 # +---------+
 
-export PYENV_ROOT="$HOME/.pyenv"
+export PYENV_ROOT="$CONFIG_HOME/.pyenv"
 
+# +------+
+# | Node |
+# +------+
+export NODEENVCONFIG=CONFIG_HOME/node/nodeenv.sh"
 
 # +---------+
 # | SCRIPTS |

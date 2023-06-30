@@ -34,7 +34,8 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 # +--------+
 
 # Override colors
-eval "$(dircolors -b $ZDOTDIR/dircolors)"
+# eval "$(dircolors -b $ZDOTDIR/dircolors)"
+export CLICOLOR=1
 
 # +---------+
 # | BREW    |
@@ -46,9 +47,11 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # +---------+
 # | PYENV   |
 # +---------+
-
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# Check if pyenv command is installed or runnable
+if ! command -v pyenv &> /dev/null; then
+  command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+fi
 
 
 # +---------+
@@ -72,92 +75,35 @@ source $DOTFILES/zsh/scripts.zsh
 mkdir -p $ZVIMRCDIR
 cp $DOTFILES/vim/vimrc $ZVIMRCDIR/vimrc
 
-# +---------+
-# | DIRENV  |
-# +---------+
 
-#echo "Configure direnv by running  - direnv hook zsh"
-#eval "$(direnv hook zsh)"
+# +-----+
+# | GIT |
+# +-----+
+
+source $GITENVCONFIG
 
 
 # +---------+
 # | PYENV   |
 # +---------+
 
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
 
 # +---------+
 # |  Node   |
 # +---------+
+# source $NODEENVCONFIG
 
-export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
-
-echo "Configure nvm. Set NVM_DIR."
-export NVM_DIR="$HOME/.nvm"
-echo "Run nvm.sh from /opt/homebrew/opt/nvm/nvm.sh"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-echo "Load nvm bash_completion by running /opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
-
-# +---------+
-# | DIRENV  |
-# +---------+
-
-# place this after nvm initialization!
-echo "Run autoload -U add-zsh-hook"
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
-}
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
-
-eval "$(direnv hook zsh)"
 
 # +---------+
 # | SSH     |
 # +---------+
 
 eval $(ssh-agent -s)
-ssh-add ~/.ssh/gitlab
 ssh-add ~/.ssh/github
-
-
-# +---------+
-# | Zapier  |
-# +---------+
-
-export NPM_TOKEN=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
-export AWS_VAULT_KEYCHAIN_NAME=login
-export JIRA_SERVER=zapierorg.atlassian.net
-export JIRA_USER=kirk.lang@zapier.com
-export JIRA_TOKEN=K8j2PwmUMdI49UqXO4A8E398
-export JIRA_ZAPIERACCOUNT_TOKEN=joBNc7IJlavnixJms2IC87D2
-
-
-# +---------+
-# | EDITOR  |
-# +---------+
-
-export NEXT_PUBLIC_SPLITIO_DISABLE_DEBUG=true
 
 
 # +---------+
