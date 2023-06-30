@@ -12,5 +12,7 @@ Personal & portable ZSH environment
  
 ## Option pre-requisites
 
-* Node
-  * Example (Mac): `brew install node` 
+* NVM
+  * [Install with Homebrew](https://tecadmin.net/install-nvm-macos-with-homebrew/)
+  * Probably need to install a version of node, the LTS. Using `node install --lts`
+  * Another useful tool for handling projects with different node version is direnv. `brew install direnv`
