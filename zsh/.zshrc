@@ -48,7 +48,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # | PYENV   |
 # +---------+
 # Check if pyenv command is installed or runnable
-if ! command -v pyenv &> /dev/null; then
+if command -v pyenv &> /dev/null; then
   command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
 fi

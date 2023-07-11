@@ -1,14 +1,15 @@
 # configuration
 alias realias='source $DOTFILES/aliases/aliases'
-alias edalias='vi ~/.config/aliases/aliases'
+alias edalias='vi $DOTFILES/aliases/aliases'
 alias grepalias='alias | grep '
 alias rescript='source $ZDOTDIR/scripts.zsh'
 
 # system
 alias bigf= 'find / -xdev -type f -size +500M'  # display "big" files > 500M
-alias lt='du -sh * | sort -h'
-alias time='/usr/bin/time'
 
+# directories
+alias dev='cd $WORKSPACE'
+alias courses='cd $WORKSPACE/courses'
 
 # zsh
 alias dotc='cd $DOTFILES'
@@ -134,12 +135,6 @@ alias vault='aws-vault exec monolith-production-developer'
 alias aws-docker-login='aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 996097627176.dkr.ecr.us-east-1.amazonaws.com'
 alias vault-docker-login='aws-vault exec monolith -- aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 996097627176.dkr.ecr.us-east-1.amazonaws.com'
 alias docker-prune='docker system prune --volumes'
-
-## directories
-alias zap='cd ~/developer/zapier'
-
-## editor
-alias editor='cd ~/developer/zapier/editor'
 
 alias etsc='eyarn ci:typecheck'
 alias etest='eyarn test'
