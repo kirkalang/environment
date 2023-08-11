@@ -107,8 +107,3 @@ eval $(ssh-agent -s)
 ssh-add ~/.ssh/github
 
 
-# +---------+
-# | OpenAI  |
-# +---------+
-
-export OPENAI_API_KEY=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

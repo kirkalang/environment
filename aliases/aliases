@@ -3,6 +3,7 @@ alias realias='source $DOTFILES/aliases/aliases'
 alias edalias='vi $DOTFILES/aliases/aliases'
 alias grepalias='alias | grep '
 alias rescript='source $ZDOTDIR/scripts.zsh'
+alias envup='cp $ZDOTDIR/zshenv $HOME/.zshenv'
 
 # system
 alias bigf= 'find / -xdev -type f -size +500M'  # display "big" files > 500M

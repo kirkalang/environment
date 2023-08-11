@@ -15,7 +15,6 @@ function gpt() {
   fi
 
   # Replace this with your actual API key
-  API_KEY="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"
   QUERY="$1"
 
   if [ -z "$QUERY" ]; then
@@ -30,7 +29,7 @@ function gpt() {
 
   curl -s -X POST \
     -H "Content-Type: application/json" \
-    -H "Authorization: Bearer $API_KEY" \
+    -H "Authorization: Bearer $OPENAI_API_KEY" \
     --data "$DATA" \
     "https://api.openai.com/v1/chat/completions" \
     | jq -r '.choices[0].message.content'

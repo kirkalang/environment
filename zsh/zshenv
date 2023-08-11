@@ -53,3 +53,11 @@ export NODEENVCONFIG="$CONFIG_HOME/node/nodeenv.sh"
 # +---------+
 
 path+=('/Users/kirklang/developer/bin')
+
+# +---------+
+# | Secrets |
+# +---------+
+if [[ -f $HOME/.secrets ]] 
+then
+  source $HOME/.secrets
+fi
