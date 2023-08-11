@@ -5,33 +5,6 @@ function chrome() {
   /usr/bin/open -a "/Applications/Google Chrome.app" "$1"
 }
 
-
-# zapier
-
-## jira
-
-### Browse the specified jira issue
-function jopen() {
-  open https://zapierorg.atlassian.net/browse/$1
-}
-
-### Open Jira filter for all my issues
-function jme() {
-  open https://zapierorg.atlassian.net/issues/?jql=assignee%20IN%20(6317c46a3e578bb3b5ffee02)%20and%20status%20not%20in%20(Done%2C%20Deployed)%20order%20by%20updated%20desc
-}
-
-## editor
-
-### Run a yarn script in the editor workspace
-eyarn() {
-  yarn workspace @zapier/editor $@ 
-}
-
-### Run yarn script in playwright workspace
-pwyarn() {
-  yarn workspace @zapier/playwright $@
-}
-
 # openai
 function gpt() {
 
