@@ -1,6 +1,5 @@
 #!/usr/bin/env zsh
 
-
 # +------------+
 # | NAVIGATION |
 # +------------+
@@ -95,8 +94,10 @@ source $GITENVCONFIG
 # +---------+
 # |  Node   |
 # +---------+
-# source $NODEENVCONFIG
-
+if [[ -f $NODEENVCONFIG ]] 
+then
+  source $NODEENVCONFIG
+fi
 
 # +---------+
 # | SSH     |

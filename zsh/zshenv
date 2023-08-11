@@ -46,7 +46,7 @@ export PYENV_ROOT="$CONFIG_HOME/.pyenv"
 # +------+
 # | Node |
 # +------+
-export NODEENVCONFIG=CONFIG_HOME/node/nodeenv.sh"
+export NODEENVCONFIG="$CONFIG_HOME/node/nodeenv.sh"
 
 # +---------+
 # | SCRIPTS |
