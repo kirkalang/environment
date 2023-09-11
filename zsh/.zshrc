@@ -99,6 +99,14 @@ then
   source $NODEENVCONFIG
 fi
 
+# +------------+
+# | Kubernetes |
+# +------------+
+if [[ -f $K8SENVCONFIG ]]
+then
+  source $K8SENVCONFIG
+fi
+
 # +---------+
 # | SSH     |
 # +---------+

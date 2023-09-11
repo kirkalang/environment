@@ -2,7 +2,7 @@
 
 export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 
-"Configure nvm. Set NVM_DIR."
+# "Configure nvm. Set NVM_DIR."
 export NVM_DIR="$HOME/.nvm"
 print -P "%F{yello}Run nvm.sh from /opt/homebrew/opt/nvm/nvm.sh%f"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
