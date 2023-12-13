@@ -114,4 +114,8 @@ fi
 eval $(ssh-agent -s)
 ssh-add ~/.ssh/github
 
-
+# +------+
+# | Ruby |
+# +------+
+. "$DOTFILES/asdf/asdf.sh"
+. "$DOTFILES/asdf/completions/asdf.bash"
