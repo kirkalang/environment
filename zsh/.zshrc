@@ -117,5 +117,8 @@ ssh-add ~/.ssh/github
 # +------+
 # | Ruby |
 # +------+
-. "$DOTFILES/asdf/asdf.sh"
-. "$DOTFILES/asdf/completions/asdf.bash"
+if [[ -f $DOTFILES/asdf/ ]] 
+then
+  . "$DOTFILES/asdf/asdf.sh"
+  . "$DOTFILES/asdf/completions/asdf.bash"
+fi
